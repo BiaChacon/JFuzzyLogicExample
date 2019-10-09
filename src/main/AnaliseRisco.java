@@ -17,7 +17,7 @@ public class AnaliseRisco {
 
 
         // Mostra todas as varivais linguisticas em grafico
-        JFuzzyChart.get().chart(fis.getFunctionBlock("atividade"));
+        JFuzzyChart.get().chart(fis.getFunctionBlock("analise"));
 
         //Seta as entradas para cada variavel linguistica
         fis.setVariable("dinheiro", 35);
@@ -27,9 +27,9 @@ public class AnaliseRisco {
         fis.evaluate();
 
         //Mostra saída em grafico
-        Variable atividade = fis.getFunctionBlock("atividade").getVariable("risco");
-        JFuzzyChart.get().chart(atividade, atividade.getDefuzzifier(), true);
-        System.out.println(atividade.getValue());
+        Variable analise = fis.getFunctionBlock("analise").getVariable("risco");
+        JFuzzyChart.get().chart(analise, analise.getDefuzzifier(), true);
+        System.out.println(analise.getValue());
     }
 
 }

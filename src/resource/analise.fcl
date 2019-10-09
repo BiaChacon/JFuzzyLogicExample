@@ -1,6 +1,4 @@
-
-
-FUNCTION_BLOCK atividade	// Block definition (there may be more than one block per file)
+FUNCTION_BLOCK analise	// Block definition (there may be more than one block per file)
 
 VAR_INPUT				// Define input variables
 	dinheiro : REAL;
@@ -30,7 +28,6 @@ DEFUZZIFY risco
 	DEFAULT := 0;		// Default value is 0 (if no rule activates defuzzifier)
 END_DEFUZZIFY
 
-
 RULEBLOCK No1
 	AND : MIN;			// Use 'min' for 'and' (also implicit use 'max' for 'or' to fulfill DeMorgan's Law)
 	ACT : MIN;			// Use 'min' activation method
@@ -42,4 +39,3 @@ RULEBLOCK No1
 END_RULEBLOCK
 
 END_FUNCTION_BLOCK
-
